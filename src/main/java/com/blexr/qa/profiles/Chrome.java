@@ -39,6 +39,7 @@ public class Chrome extends Default {
             options.addArguments("--disable-browser-side-navigation");
             options.addArguments("--disable-gpu");
             options.addArguments("--accept-insecure-certs");
+            options.addArguments("--enable-javascript");
             result = new ChromeDriver(options);
             currentDriver = result;
         }
