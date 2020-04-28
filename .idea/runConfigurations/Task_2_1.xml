@@ -4,7 +4,7 @@
     <useClassPathOnly />
     <option name="PACKAGE_NAME" value="com.blexr.qa.tests" />
     <option name="MAIN_CLASS_NAME" value="com.blexr.qa.tests.Part2Tests" />
-    <option name="METHOD_NAME" value="Task21Test" />
+    <option name="METHOD_NAME" value="Task22Test" />
     <option name="TEST_OBJECT" value="method" />
     <option name="VM_PARAMETERS" value="-ea -Dspring.profiles.active=chrome" />
     <option name="PARAMETERS" value="" />
