@@ -1,5 +1,6 @@
-package com.blexr.qa.pages;
+package com.blexr.qa.pages.vegas;
 
+import com.blexr.qa.pages.BasePage;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -27,7 +28,7 @@ public class LandingPage extends BasePage {
             waitForLoad();
             scrollTo(footer.get(0));
             } catch (WebDriverException e) {
-            log.error("Failed to initialize landing page", e);
+            throw new RuntimeException("Failed to initialize landing page", e);
         }
     }
 

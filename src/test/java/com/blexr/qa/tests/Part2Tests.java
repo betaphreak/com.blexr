@@ -1,10 +1,12 @@
 package com.blexr.qa.tests;
 
-import com.blexr.qa.pages.LandingPage;
-import com.blexr.qa.pages.RelativePage;
+import com.blexr.qa.pages.sbo.GwtBonusPage;
+import com.blexr.qa.pages.sbo.GwtDepositPage;
+import com.blexr.qa.pages.sbo.GwtDevicePage;
+import com.blexr.qa.pages.sbo.SboPage;
+import com.blexr.qa.pages.vegas.LandingPage;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.hamcrest.core.StringContains;
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,6 +22,7 @@ import java.util.Map;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.Assert.assertFalse;
 
 @ContextConfiguration(locations = { "/applicationContext.xml" })
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -61,6 +64,18 @@ public class Part2Tests {
             assertThat(eval.getValue(), StringContains.containsString(urlPart));
             landingPage = eval.getKey();
         });
+    }
+
+    @Test
+    public void Task23Test() throws InterruptedException
+    {
+        driver.navigate().to("https://www.sbo.net/");
+        SboPage sbo = new SboPage(driver);
+        GwtDevicePage device = sbo.bookieSelect();
+        GwtDepositPage deposit = device.selectDesktop();
+        GwtBonusPage bonus = deposit.selectMidDeposit();
+        sbo = bonus.selectYes();
+        assertFalse(sbo.hasFailedGwt());
     }
 
 

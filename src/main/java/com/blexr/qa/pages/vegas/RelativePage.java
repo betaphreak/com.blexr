@@ -1,5 +1,6 @@
-package com.blexr.qa.pages;
+package com.blexr.qa.pages.vegas;
 
+import com.blexr.qa.pages.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
