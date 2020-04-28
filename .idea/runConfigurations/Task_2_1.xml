@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Task 2.1" type="JUnit" factoryName="JUnit">
+    <module name="com.blexr" />
+    <useClassPathOnly />
+    <option name="PACKAGE_NAME" value="com.blexr.qa.tests" />
+    <option name="MAIN_CLASS_NAME" value="com.blexr.qa.tests.Part2Tests" />
+    <option name="METHOD_NAME" value="Task21Test" />
+    <option name="TEST_OBJECT" value="method" />
+    <option name="VM_PARAMETERS" value="-ea -Dspring.profiles.active=chrome" />
+    <option name="PARAMETERS" value="" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
